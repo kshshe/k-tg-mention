@@ -47,9 +47,9 @@ const saveChatUser = async (chatId, userInfo) => {
     first_name: firstName,
     username,
   } = userInfo;
-  // if (isBot) {
-  //     return;
-  // }
+  if (isBot) {
+    return;
+  }
   await setItem(`${chatId}/members/info`, memberId, {
     memberId,
     firstName,
