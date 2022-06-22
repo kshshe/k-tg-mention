@@ -73,7 +73,7 @@ const saveChatUser = async (chatId, userInfo) => {
         return `[${displayName}](tg://user?id=${memberId})`;
       })
     );
-    await ctx.reply(`👌\r\n\r\n${mentions.join(", ")}`, {
+    await ctx.reply(`${mentions.join(", ")}`, {
       parse_mode: "Markdown",
     });
   });
